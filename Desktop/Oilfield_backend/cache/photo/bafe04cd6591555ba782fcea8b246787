@@ -1,0 +1,63 @@
+import requests
+url1 = "http://zbjkttb.nuc.edu.cn:80/microapp/health_daily/report"
+
+header = {
+"Host": "zbjkttb.nuc.edu.cn",
+"Connection": "keep-alive",
+"Content-Length": "1292",
+"Accept": "application/json, text/plain, */*",
+"Origin":"http://zbjkttb.nuc.edu.cn",
+"User-Agent": "Mozilla/5.0 (Linux; Android 10; POT-AL00a Build/HUAWEIPOT-AL00a; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045438 Mobile Safari/537.36 wxwork/3.1.2 MicroMessenger/7.0.1 NetType/WIFI Language/zh Lang/zh",
+"Content-Type": "application/json;charset=UTF-8",
+"X-Requested-With": "com.tencent.wework",
+"Referer": "http://zbjkttb.nuc.edu.cn/front/index.html",
+"Accept-Encoding": "gzip, deflate",
+"Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+"Cookie": "JSESSIONID=D4B98D645825643C23928F2C7127ACFC",
+}
+
+json = {
+	"address":"华沟公交站",
+	"locationErrorExplain":'',
+	"province":"山东省",
+	"city":"淄博市",
+	"county":"桓台县",
+	"distance":1,
+	"longitude":118.062317,
+	"latitude":37.063311,
+	"temperature":"36.5",
+	"healthCondition":"正常",
+	"healthConditionExplain":'',
+	"familyCondition":"正常",
+	"familyConditionExplain":'',
+	"recentlyGoArea":"无",
+	"recentlyGoAreaExplain":'',
+	"ifContactCase":"无",
+	"ifContactCaseExplain":'',
+	"ifContactAreaBackPerson":"无",
+	"ifContactAreaBackPersonExplain":'',
+	"ifContactRjry":"无",
+	"ifContactRjryExplain":'',
+	"roomieTempIsUnusual":"否",
+	"roomieTempUnusualDesc":'',
+	"isConfirmed":"否",
+	"confirmedDesc":'',
+	"isRoommateToHotArea":"无",
+	"roommateToHotAreaDesc":'',
+	"isManyPeopleParty":"否",
+	"manyPeoplePartyDesc":'',
+	"ifReturnToSchool":"否",
+	"ifReturnToSchoolExplain":'',
+	"billingContactName":"宋安光",
+	"billingContactNameTel":"13964444055",
+	"specialSituation":'',
+	"expectedDestination":'',
+	"ifFromToFocusArea":"否",
+	"ifFromToFocusAreaExplain":"",
+	"fileUrl":" ",
+	"time":"2021-02-17 16:54:00",
+	"plusinfo":"Mozilla/5.0 (Linux; Android 10; POT-AL00a Build/HUAWEIPOT-AL00a; wv) AppleWebKit/537.36 (KHTML,like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045438 Mobile Safari/537.36 wxwork/3.1.2 MicroMessenger/7.0.1 NetType/WIFI Language/zh Lang/zh"
+}
+
+response = requests.post(url=url1, json=json, headers=header)
+print(response.json())

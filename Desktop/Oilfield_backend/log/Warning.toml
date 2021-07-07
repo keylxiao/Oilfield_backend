@@ -1,0 +1,7 @@
+
+[setting]
+  warningphotopath = "./cache/photo/"
+  warningphototype = ".jpg"
+  warningstoragetime = 50
+  warningvideopath = "./cache/video/"
+  warningvideotype = ".mp4"
